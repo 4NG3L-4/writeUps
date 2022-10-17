@@ -7,6 +7,7 @@ In this repo, you find my write ups for CTF challenges. Actually I'm focusing on
 | Name| Category| CTF| Points|  
 | --- | --- | --- | --- |
 |[Phishing](./IngeHack3.0/Phishing.md)|Forensics|IngeHack3.0|465|
+|[The Evil's Den](./MemLabs/Lab%203%20-%20The%20Evil's%20Den.md)|Forensics|Memlabs|/|
 |[A New World](./MemLabs/Lab%202%20-%20A%20New%20World)|Forensics|Memlabs|/|
 |[Beginner's Luck](./MemLabs/Lab%201%20-%20Beginner's%20Luck.md)|Forensics|Memlabs|/|
 |[Never Too Late Mister](./MemLabs/Lab%200%20-%20Never%20Too%20Late%20Mister.md)|Forensics|MemLabs|/|
