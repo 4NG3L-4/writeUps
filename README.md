@@ -6,6 +6,7 @@ In this repo, you find my write ups for CTF challenges. Actually I'm focusing on
 
 | Name| Category| CTF| Points|  
 | --- | --- | --- | --- |
+|[Black Tuesday](./MemLabs/Lab%205%20-%20Black%20Tuesday.md)|Memory Forensics|Memlabs|/|
 |[Obsession](./MemLabs/Lab%204%20-%20Obsession)|Memory Forensics|Memlabs|/|
 |[Phishing](./IngeHack3.0/Phishing.md)|DFIR|IngeHack3.0|465|
 |[The Evil's Den](./MemLabs/Lab%203%20-%20The%20Evil's%20Den.md)|Memory Forensics|Memlabs|/|
