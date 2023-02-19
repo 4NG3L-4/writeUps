@@ -6,6 +6,7 @@ In this repo, you find my write ups for CTF challenges. Actually I'm focusing on
 
 | Name| Category| CTF| Points|  
 | --- | --- | --- | --- |
+|[Infection](./HackINI-2k23-CTF/Infection.md)🩸|DFIR|HackINI 2k23|500|
 |[Capture The Adversary](./Elastic%20Security%20EMEA%20CTF/Capture%20The%20Adversary.md)|SOC|Elastic Security EMEA|300|
 |[The Reckoning](./MemLabs/Lab%206%20-%20The%20Reckoning.md)|Memory Forensics|Memlabs|/|
 |[Black Tuesday](./MemLabs/Lab%205%20-%20Black%20Tuesday.md)|Memory Forensics|Memlabs|/|
